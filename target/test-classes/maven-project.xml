@@ -15,7 +15,7 @@ http://www.mulesoft.org/schema/mule/json http://www.mulesoft.org/schema/mule/jso
         <http:listener config-ref="HTTP_Listener_Configuration" path="/" doc:name="HTTP"/>
         <set-payload value="Hello Maven" doc:name="Set Payload"/>
         <db:select config-ref="MySQL_Configuration" doc:name="Database">
-            <db:parameterized-query><![CDATA[SELECT * FROM fligths WHERE]]></db:parameterized-query>
+            <db:parameterized-query><![CDATA[SELECT * FROM flights]]></db:parameterized-query>
         </db:select>
         <json:object-to-json-transformer doc:name="Object to JSON"/>
     </flow>
